@@ -6,7 +6,7 @@ The goal was to accurately identify fraudulent activity while balancing detectio
 ---
 
 > 📄 **Full Project Report:**  
-> [Read the detailed write-up (PDF)](./Credit%Card%Fraud%Detection%Report.pdf)
+> [Read the detailed write-up (PDF)](./Credit%20Card%20Fraud%20Detection%20Report.pdf)
 
 ---
 
@@ -26,7 +26,7 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
   - **Wrapper stage** using sequential forward selection with LightGBM to select the best multivariate feature set  
 
   <p align="center">
-    <img src="plots/performance_nvars.png" alt="Stepwise Feature Selection" width="600"/>
+    <img src="performance_nvars.png" alt="Stepwise Feature Selection" width="600"/>
   </p>
 
 - **Model Evaluation:**  
@@ -43,7 +43,7 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
   > **Estimated Annual Savings** = (12/2) × (10,000,000 / 100,000) × (Observed Net Savings on OOT Sample)
 
   <p align="center">
-    <img src="plots/savings.png" alt="Savings Curve" width="600"/>
+    <img src="savings.png" alt="Savings Curve" width="600"/>
   </p>
 
   This results in an estimated savings of **~$51 million/year** at optimal threshold settings.
@@ -59,9 +59,10 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
 
 ---
 
-# Key Outcomes
+# 🔑 Key Outcomes
 
 - Full fraud detection pipeline: from raw data → business-ready model
 - Strong performance on unseen (OOT) data
 - Focus on practical cost-benefit analysis, not just model accuracy
 - End result: a deployable fraud detection system with large potential financial savings
+
