@@ -49,6 +49,8 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
   </p>
 
   <p align="center"><em>Estimated savings curve showing fraud savings (green), false positive losses (red), and overall net savings (blue) across different model thresholds.</em></p>
+<em>Note: The savings curve appears jagged due to the rarity of frauds and the sensitive dependence on threshold settings. Small changes in score cutoff can lead to large swings in detected fraud amounts.</em>
+
 
   Based on these results, the model could save approximately **~$51 million/year** if deployed at scale.
 
