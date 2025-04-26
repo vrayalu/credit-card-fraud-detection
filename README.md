@@ -1,7 +1,16 @@
-# 📄 Project Overview
+# Credit Card Transaction Fraud Detection
 
 This project focuses on developing a machine learning-based fraud detection system for credit card transactions.  
 The goal was to accurately identify fraudulent activity while balancing detection performance with business impact.
+
+---
+
+> 📄 **Full Project Report:**  
+> [Read the detailed write-up (PDF)](reports/Credit_Card_Fraud_Detection_Report.pdf)
+
+---
+
+# Project Overview
 
 Starting with raw transactional data, I built an end-to-end pipeline involving:
 
@@ -13,23 +22,31 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
 
 - **Feature Selection:**  
   Used a two-stage approach:  
-  - **Filter stage** based on Kolmogorov-Smirnov (KS) statistic to rank variables individually.  
-  - **Wrapper stage** using sequential forward selection with a LightGBM model to select the best set of 20 multivariate features.
+  - **Filter stage** based on Kolmogorov-Smirnov (KS) statistic to rank variables individually  
+  - **Wrapper stage** using sequential forward selection with LightGBM to select the best multivariate feature set  
 
-- **Model Building and Evaluation:**  
-  Trained multiple machine learning models and manually cross-validated them using repeated random splits.  
-  The best model, a LightGBM classifier, achieved a Fraud Detection Rate (FDR) of **~0.631** at a 3% investigation rate on out-of-time (OOT) data.
+  <p align="center">
+    <img src="plots/performance_nvars.png" alt="Stepwise Feature Selection" width="600"/>
+  </p>
+
+- **Model Evaluation:**  
+  Multiple models were evaluated using repeated randomized splits to manually cross-validate performance.  
+  The best model achieved a Fraud Detection Rate (FDR) of **~0.631** at a 3% investigation rate on out-of-time (OOT) data.
 
 - **Business Impact Analysis:**  
-  Developed savings curves showing fraud savings, false positive losses, and overall net savings across different score thresholds.  
-  Estimated potential savings were calculated based on:  
-  - A gain of $400 for each correctly identified fraudulent transaction  
-  - A loss of $20 for each legitimate transaction incorrectly flagged  
-  - Scaling the savings to 10 million transactions per year using the formula:
+  Final predictions were converted into score percentiles and thresholds to simulate how a real-world investigation system would work.  
+  A financial curve was created to estimate annual savings, based on:
+  - $400 saved per correctly detected fraud
+  - $20 lost per false positive
+  - Scaled to 10 million transactions/year using:
 
-  > Estimated Savings = (12/2) × (10,000,000/100,000) × (Observed Savings on OOT Sample)
+  > **Estimated Annual Savings** = (12/2) × (10,000,000 / 100,000) × (Observed Net Savings on OOT Sample)
 
-  Based on this, the model could save approximately **$51 million per year** if deployed at scale.
+  <p align="center">
+    <img src="plots/savings.png" alt="Savings Curve" width="600"/>
+  </p>
+
+  This results in an estimated savings of **~$51 million/year** at optimal threshold settings.
 
 ---
 
