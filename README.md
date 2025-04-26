@@ -6,7 +6,7 @@ The goal was to accurately identify fraudulent activity while balancing detectio
 ---
 
 > 📄 **Full Project Report:**  
-> [Read the detailed write-up (PDF)](reports/Credit_Card_Fraud_Detection_Report.pdf)
+> [Read the detailed write-up (PDF)](./Credit%Card%Fraud%Detection%Report.pdf)
 
 ---
 
