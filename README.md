@@ -29,7 +29,9 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
     <img src="performance_nvars.png" alt="Stepwise Feature Selection" width="600"/>
   </p>
 
-- **Model Evaluation:**  
+  <p align="center"><em>Performance curve showing how model performance improves with the number of features selected. Performance plateaus around 10-15 variables, indicating an optimal feature subset.</em></p>
+
+- **Model Evaluation:**   
   Multiple models were evaluated using repeated randomized splits to manually cross-validate performance.  
   The best model achieved a Fraud Detection Rate (FDR) of **~0.631** at a 3% investigation rate on out-of-time (OOT) data.
 
@@ -46,7 +48,9 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
     <img src="savings.png" alt="Savings Curve" width="600"/>
   </p>
 
-  This results in an estimated savings of **~$51 million/year** at optimal threshold settings.
+  <p align="center"><em>Estimated savings curve showing fraud savings (green), false positive losses (red), and overall net savings (blue) across different model thresholds.</em></p>
+
+  Based on these results, the model could save approximately **~$51 million/year** if deployed at scale.
 
 ---
 
