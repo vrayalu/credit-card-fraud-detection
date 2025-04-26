@@ -37,7 +37,7 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
 
 - **Business Impact Analysis:**  
   Final predictions were converted into score percentiles and thresholds to simulate how a real-world investigation system would work.  
-  A financial curve was created to estimate annual savings, based on:
+  A financial curve was created to estimate annual savings, based on these assumptions:
   - $400 saved per correctly detected fraud
   - $20 lost per false positive
   - Scaled to 10 million transactions/year using:
