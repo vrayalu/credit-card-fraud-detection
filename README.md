@@ -29,7 +29,7 @@ Starting with raw transactional data, I built an end-to-end pipeline involving:
     <img src="performance_nvars.png" alt="Stepwise Feature Selection" width="600"/>
   </p>
 
-  <p align="center"><em>Performance curve showing how model performance improves with the number of features selected. Performance plateaus around 10-15 variables, indicating an optimal feature subset.</em></p>
+  <p align="center"><em>Performance curve showing how model performance improves with the number of features selected. Performance plateaus after around 10 variables, indicating an optimal feature subset.</em></p>
 
 - **Model Evaluation:**   
   Multiple models were evaluated using repeated randomized splits to manually cross-validate performance.  
